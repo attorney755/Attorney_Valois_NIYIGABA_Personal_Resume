@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--
+    I used UNICONS because I wanted to have access to a wide variety of high-quality, scalable vector icons for my website.
+    The UNICONS library provides a comprehensive set of icons that are easy to integrate and customize.
+    By including the stylesheet link, I ensure that all the icons I use on my site are consistent and visually appealing.
+-->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+<!--
+    I included this CSS file to apply custom styles to my website.
+    The style.css file contains all the specific styling rules that I've written to design the layout, color scheme, typography, and other visual elements of my site.
+    This separation of concerns helps keep my HTML clean and makes it easier to maintain and update the design.
+-->
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!--
+    I added a favicon to improve the branding and user experience of my website.
+    The favicon is a small icon that appears in the browser tab, bookmarks, and other places, providing a visual cue that helps users quickly identify my site.
+    I used the logo of my brand, "Attorney Valois Logo.png", to reinforce brand recognition.
+-->
+    
+<link rel="shortcut icon" href="assets/images/Attorney Valois Logo.png" type="image/x-icon">
+
+
+    <title>Attorney Valois Portfolio</title>
+</head>
+<body>
+   <div class="container">
+   
+    <!-- I created a semantic <nav> for the main navigation bar -->
+    <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Attorney Valois</p>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <!-- Navigation links for each section -->
+                <li class="nav_list">
+                    <a href="#home" class="nav-link active-link">Home</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="wrapper">
+        
+        <!-- I used <section> for the hero area, with a unique ID for navigation -->
+        <section class="featured-box" id="home">
+            <div class="featured-text">
+             
+                <div class="featured-name">
+                    <p>I'm <span class="typedText"></span></p>
+                </div>
+                <div class="featured-text-info">
+                    <p>
+                        I am a Web Developer and Programmer. I have honed my skills in web development and programming. I am from Karongi and am currently pursuing a Bachelor of Software Engineering (BSE) at the African Leadership University campus. Here are the major skills I have: web development, DBMS, Python, PHP, JavaScript, and more.
+                    </p>
+                </div>
+                <div class="featured-text-btn">
+                    <!-- Download CV and Resume buttons -->
+                    <a href="assets/My CV.pdf" class="btn" style="text-decoration: none;">Download CV</a>
+                    <a href="assets/RESUME.pdf" class="btn" style="text-decoration: none;">Resume</a>
+                </div>
+                <br>
+                <!-- Social media icons with links -->
+                <div class="footer-social-icons">
+                    <a href="https://www.instagram.com/valois_96/" target="_blank" class="icon"><i class="uil uil-instagram"></i></a>
+                    <a href="https://github.com/attorney755" target="_blank" class="icon"><i class="uil uil-github-alt"></i></a>
+                </div>
+            </div>
+            <div class="featured-image">
+                <div class="image">
+                    <img src="assets/images/profile.jpg" alt="avatar">
+                </div>
+            </div>
+            <!-- Scroll down button -->
+            <div class="scroll-icon-box">
+                <a href="#about" class="scroll-btn">
+                    <i class="uil uil-mouse-alt"></i>
+                    <p>Scroll Down</p>
+                </a>
+            </div>
+        </section>
+
+      
+        <!-- I used <section> for About Me, with a wide, readable box and semantic <p> -->
+        <section class="section" id="about">
+            <div class="top-header">
+                <h1>About Me</h1>
+            </div>
+            <div class="about-centered-box">
+                <p>
+                    Hi Everyone, I am Attorney Valois NIYIGABA, and I am currently pursuing a Bachelor of Science in Engineering (BSE) (2023-Present) at the African Leadership University.<br><br>
+                    I'm absolutely grateful to introduce myself and share my thoughts here. I was born in Musanze, Northern Province, Rwanda. I completed my higher secondary education at Lycée de Nyanza and passed my National Examinations in 2023.<br><br>
+                    Following that, I was admitted to the African Leadership University in September 2023, where I began my BSE degree. I love coding and am a first-year BSE student with a passion for web development.<br><br>
+                    Currently, I am focused on honing my skills in full-stack web development. I have experience with programming languages such as C, Java, and Python, as well as technologies like HTML5, CSS3, and JavaScript. I have successfully completed several projects using these technologies.
+                </p>
+            </div>
+        </section>
+
+      
+        <!-- I used <section> for Projects, with cards for each project and overlay on hover -->
+        <section class="section" id="projects">
+            <div class="top-header">
+                <h1>My Projects</h1>
+            </div>
+            <div class="project-container">
+                <!-- Project card 1 -->
+                <article class="project-card">
+                    <img src="assets/images/Stock Management system.jpeg" alt="Project 1 Screenshot" />
+                    <div class="project-card-overlay">
+                        <h3>Stock Management System</h3>
+                        <p>Owned by Amasumo C, LTD</p>
+                    </div>
+                </article>
+                <!-- Project card 2 with link -->
+                <article class="project-card">
+                    <img src="assets/images/Think tank website.png" alt="Project 2 Screenshot" />
+                    <div class="project-card-overlay">
+                        <h3>Think tank website</h3>
+                        <p>
+                            <a href="https://alupeakyblinders.netlify.app/" target="_blank" style="color: #fff; text-decoration: underline;">Click here to view it.</a>
+                        </p>
+                    </div>
+                </article>
+                <!-- Project card 3 -->
+                <article class="project-card">
+                    <img src="assets/images/Tangamakuru.png" alt="Project 3 Screenshot" />
+                    <div class="project-card-overlay">
+                        <h3>TANGAMAKURU</h3>
+                        <p>Runs on my Local server. Not yet Published</p>
+                    </div>
+                </article>
+                <!-- Project card 4 with link -->
+                <article class="project-card">
+                    <img src="assets/images/Submission Reminder App.png" alt="Project 4 Screenshot" />
+                    <div class="project-card-overlay">
+                        <h3>Submission Reminder App</h3>
+                        <p>
+                            <a href="https://github.com/attorney755/submission_reminder_app_attorney755" target="_blank" style="color: #fff; text-decoration: underline;">Click here to View it</a>
+                        </p>
+                    </div>
+                </article>
+                <!-- Add more project-card articles as needed -->
+            </div>
+        </section>
+
+      
+        <!-- I used <section> for Experience, with semantic <article> for each job -->
+        <section class="section" id="experience">
+            <div class="top-header">
+                <h1>Experience</h1>
+            </div>
+            <div class="experience-timeline">
+                <!-- Experience 1 -->
+                <article class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-role">Software Developer Intern</span>
+                        <span class="exp-company">@ Lycee de Nyanza Secondary School</span>
+                        <span class="exp-date">02/2023 - 05/2024, Nyanza</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li>Developed educational software tools to enhance the learning experience for students.</li>
+                        <li>Worked closely with teachers and administrators to understand their needs and deliver tailored solutions.</li>
+                        <li>Maintained and updated existing software to ensure compatibility with new educational standards.</li>
+                    </ul>
+                </article>
+                <!-- Experience 2 -->
+                <article class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-role">Phone Sales and Network Services Representative</span>
+                        <span class="exp-company">@ Airtel Rwanda</span>
+                        <span class="exp-date">02/2021 - 09/2022, Karongi, Rwanda</span>
+                    </div>
+                    <ul class="exp-details">
+                        <li>Handled phone sales and ensured customer satisfaction through excellent service.</li>
+                        <li>Provided network services such as SIM registration and SIM swap.</li>
+                        <li>Assisted customers with withdrawing funds and other financial transactions.</li>
+                        <li>Maintained accurate records of sales and transactions.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        
+        <!-- I used <section> for Skills, with progress bars for each skill -->
+        <section class="section" id="skills">
+            <div class="top-header">
+                <h1>Skills</h1>
+            </div>
+            <div class="skills-bars">
+                <!-- Each skill bar shows skill name and percentage -->
+                <div class="skill-bar">
+                    <span>HTML5</span>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 95%"></div></div>
+                    <span class="bar-percent">95%</span>
+                </div>
+                <div class="skill-bar">
+                    <span>CSS3</span>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 92%"></div></div>
+                    <span class="bar-percent">92%</span>
+                </div>
+                <div class="skill-bar">
+                    <span>JavaScript</span>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 88%"></div></div>
+                    <span class="bar-percent">88%</span>
+                </div>
+                <div class="skill-bar">
+                    <span>React</span>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
+                    <span class="bar-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                    <span>Python</span>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 75%"></div></div>
+                    <span class="bar-percent">75%</span>
+                </div>
+                <div class="skill-bar">
+                    <span>Figma</span>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 70%"></div></div>
+                    <span class="bar-percent">70%</span>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- I used <section> for Contact, with semantic <form> for the contact form -->
+        <section class="section" id="contact">
+            <div class="top-header">
+                <h1>Get in touch</h1>
+                <span>Is There Anything I Can Help You With?</span>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="contact-info">
+                        <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                        <p><i class="uil uil-envelope"></i> Email: attorneyvalois@gmail.com</p>
+                        <p><i class="uil uil-phone"></i> Tel: +250788847286</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Contact form for user messages -->
+                    <form class="form-control">
+                        <div class="form-inputs">
+                            <input type="text" class="input-field" placeholder="Name" required>
+                            <input type="email" class="input-field" placeholder="Email" required>
+                        </div>
+                        <div class="text-area">
+                            <textarea placeholder="Message" required></textarea>
+                        </div>
+                        <div class="form-button">
+                            <button class="btn" type="submit">Send <i class="uil uil-message"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- I used <footer> for the site footer, with navigation and social links -->
+    <footer>
+        <div class="top-footer">
+            <p>Attorney Valois NIYIGABA .</p>
+        </div>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Social media icons in the footer -->
+        <div class="footer-social-icons">
+            <a href="https://www.instagram.com/valois_96/" target="_blank" class="icon"><i class="uil uil-instagram"></i></a>
+            <a href="https://github.com/attorney755" target="_blank" class="icon"><i class="uil uil-github-alt"></i></a>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Attorney Valois</a> - All rights reserved</p>
+        </div>
+    </footer>
+    </div>
+
+   
+    <!-- Typed.js for typing effect -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- ScrollReveal for scroll animations -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Main JS file for custom scripts -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

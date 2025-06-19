@@ -1,0 +1,776 @@
+/* I imported the Poppins font from Google Fonts to ensure a consistent and modern typography across the website. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* I defined CSS variables for colors to maintain a consistent color scheme and make it easy to update colors site-wide. */
+:root {
+    --body-color: rgb(250, 250, 250);
+    --color-white: rgb(255, 255, 255);
+    --text-color-second: rgb(68, 68, 68);
+    --text-color-third: rgb(30, 159, 171);
+    --first-color: rgb(110, 87, 224);
+    --first-color-hover: rgb(40, 91, 212);
+    --second-color: rgb(0, 201, 255);
+    --third-color: rgb(192, 166, 49);
+    --first-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* I reset the default margin, padding, and box-sizing for all elements to ensure a consistent layout across different browsers. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* I enabled smooth scrolling for the entire webpage to enhance the user experience when navigating through sections. */
+html {
+    scroll-behavior: smooth;
+}
+
+/* I customized the scrollbar to match the design aesthetics of the website. */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+/* I created reusable CSS classes for buttons to maintain a consistent design and reduce redundancy. */
+.btn {
+    font-weight: 500;
+    padding: 12px 20px;
+    background: #efefef;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.btn>i {
+    margin-left: 10px;
+}
+.btn:hover {
+    background: var(--second-color);
+    color: var(--color-white);
+}
+
+/* I set a global style for icons to ensure they are consistently sized. */
+i {
+    font-size: 16px;
+}
+
+/* I set the base styles for the body and container elements to ensure a consistent layout. */
+body {
+    background: var(--body-color);
+}
+.container {
+    width: 100%;
+    position: relative;
+}
+
+/* I styled the navigation bar to be fixed at the top of the page, with a clean and modern design. */
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    background: var(--body-color);
+    padding-inline: 9vw;
+    transition: .3s;
+    z-index: 100;
+}
+.nav-logo {
+   position: relative;
+}
+.nav-name {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
+}
+.nav-logo span {
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: var(--text-color-second);
+}
+.nav-menu, .nav_menu_list {
+    display: flex;
+}
+.nav-menu .nav_list {
+    list-style: none;
+    position: relative;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    padding-inline: 15px;
+    margin-inline: 10px;
+}
+.nav-menu-btn {
+    display: none;
+}
+.nav-menu-btn i {
+    font-size: 28px;
+    cursor: pointer;
+}
+.active-link {
+    position: relative;
+    color: var(--first-color);
+    transition: .3s;
+}
+.active-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+
+/* I added a wrapper class to provide consistent padding on the sides of the content. */
+.wrapper {
+    padding-inline: 10vw;
+}
+
+/* I designed the featured box to prominently display key content with a flexible layout. */
+.featured-box {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    min-height: 700px;
+}
+
+/* I styled the featured text section to create an engaging introduction. */
+.featured-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 20px;
+}
+.featured-text-card span {
+    background: var(--third-color);
+    color: var(--color-white);
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.featured-name {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-block: 20px;
+}
+.typedText {
+    text-transform: capitalize;
+    color: var(--text-color-third);
+}
+.featured-text-info {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: var(--text-color-second);
+}
+.featured-text-btn {
+    display: flex;
+    gap: 20px;
+}
+.featured-text-btn>.blue-btn {
+    background: var(--first-color);
+    color: var(--color-white);
+}
+.featured-text-btn>.blue-btn:hover {
+    background: var(--first-color-hover);
+}
+.social_icons {
+    display: flex;
+    margin-top: 5em;
+    gap: 30px;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.icon:hover {
+    color: var(--first-color);
+}
+
+/* I styled the featured image section to complement the text and add visual interest. */
+.featured-image {
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    min-height: 80vh;
+    width: 50%;
+}
+.image {
+    margin: auto 0;
+    width: 380px;
+    height: 380px;
+    border-radius: 55% 45% 55% 45%;
+    overflow: hidden;
+    animation: imgFloat 7s ease-in-out infinite;
+}
+.image img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
+@keyframes imgFloat {
+    50% {
+        transform: translateY(10px);
+        border-radius: 45% 55% 45% 55%;
+    }
+}
+.scroll-btn {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   translate: -50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 150px;
+   height: 50px;
+   gap: 5px;
+   text-decoration: none;
+   color: var(--text-color-second);
+   background: var(--color-white);
+   border-radius: 30px;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.scroll-btn i {
+    font-size: 20px;
+}
+
+/* I created a section class to provide consistent spacing for different sections of the website. */
+.section {
+    padding-block: 5em;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+.col {
+    display: flex;
+    width: 50%;
+}
+
+/* I created reusable CSS classes for headers to maintain a consistent design. */
+.top-header {
+    text-align: center;
+    margin-bottom: 5em;
+}
+.top-header h1 {
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 10px;
+}
+.top-header span {
+    color: #999;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 15px;
+}
+
+/* I styled the about info section to provide a clean and informative layout. */
+.about-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 10%;
+    background: var(--color-white);
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    border-radius: 20px;
+}
+.about-info p {
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+}
+.about-btn button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: var(--first-color);
+    color: var(--color-white);
+    border-radius: 30px;
+}
+.about-btn button:hover {
+    background: var(--first-color-hover);
+}
+
+/* I designed the skills box to display skills in a visually appealing manner. */
+.skills-box {
+    margin: 10px;
+}
+.skills-header {
+    margin-bottom: 30px;
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.skills-list span {
+    font-size: 14px;
+    background: var(--first-color);
+    color: var(--color-white);
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+.skills-bars {
+  max-width: 700px;
+  margin: 2em auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+}
+.skill-bar {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.skill-bar span {
+  min-width: 90px;
+  font-weight: 500;
+  color: var(--first-color);
+}
+.bar-bg {
+  flex: 1;
+  background: #eaeaea;
+  border-radius: 8px;
+  height: 14px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--first-color) 60%, var(--second-color) 100%);
+  border-radius: 8px;
+  transition: width 1.2s cubic-bezier(.4,0,.2,1);
+}
+.bar-percent {
+  min-width: 40px;
+  color: #444;
+  font-weight: 500;
+}
+
+/* I styled the projects box to showcase projects in a grid layout. */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+.project-card {
+    position: relative;
+    width: 240px;
+    height: 170px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    background: var(--color-white);
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+.project-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 201, 255, 0.85);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+.project-card:hover {
+    box-shadow: 0 6px 18px rgba(110,87,224,0.13);
+    transform: translateY(-6px) scale(1.03);
+}
+.project-card:hover img {
+    transform: scale(1.08);
+    filter: blur(2px) brightness(0.7);
+}
+.project-card:hover .project-card-overlay {
+    opacity: 1;
+}
+
+/* I styled the contact box to provide a clear and accessible way for users to get in touch. */
+.contact-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    height: 315px;
+    background: var(--second-color);
+    border-radius: 10px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+}
+.contact-info>h2 {
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+.contact-info>p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-white);
+    margin-block: 5px;
+}
+.contact-info p>i {
+    font-size: 18px;
+}
+.contact-info::after {
+    background: var(--color-white);
+}
+.contact-info:hover.contact-info h2,
+.contact-info:hover.contact-info p,
+.contact-info:hover.contact-info i {
+    color: #777;
+    z-index: 2;
+}
+
+/* I designed the contact form to be user-friendly and visually consistent with the rest of the site. */
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.form-inputs {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.input-field {
+    width: 50%;
+    height: 55px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 10px;
+    padding-inline: 20px;
+    outline: none;
+}
+textarea {
+    width: 100%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 10px;
+    padding: 15px 20px;
+    outline: none;
+    resize: none;
+}
+.form-button>.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-color);
+    color: var(--color-white);
+}
+.form-button>.btn:hover {
+    background: #00B5E7;
+}
+.form-button i {
+    font-size: 18px;
+    rotate: -45deg;
+}
+
+/* I styled the footer to provide a clean and informative closing to the website. */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background: #F8F8F8;
+    padding-block: 40px 60px;
+}
+.top-footer p {
+    font-size: 25px;
+    font-weight: 600;
+}
+.middle-footer .footer-menu {
+    display: flex;
+}
+.footer_menu_list {
+    list-style: none;
+}
+.footer_menu_list a {
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    margin-inline: 20px;
+}
+.footer-social-icons {
+    display: flex;
+    gap: 30px;
+}
+.bottom-footer {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* I added media queries to ensure the website is responsive and looks good on different screen sizes. */
+@media only screen and (max-width: 1024px) {
+    .featured-text {
+        padding: 0;
+    }
+    .image, .image img {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .nav-button {
+        display: none;
+    }
+    .nav-menu.responsive {
+        left: 50%;
+        top: 100px;
+        transform: translateX(-50%);
+        width: 85vw;
+        max-width: 350px;
+        min-width: 220px;
+        height: auto;
+        min-height: 0;
+        background: #090040;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+        padding: 30px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        transition: .3s;
+        backdrop-filter: blur(5px);
+        left: 0;
+        top: 80px;
+        transform: translateX(0);
+    }
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        padding: 20px;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        gap: 20px;
+        overflow: hidden;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        
+}
+    .nav_menu_list {
+        flex-direction: column;
+    }
+    .nav-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .featured-box {
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+    .featured-text {
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        align-content: flex-start;
+        min-height: 60vh;
+
+    }
+    .social_icons {
+        margin-top: 2em;
+    }
+    .featured-image {
+        order: 1;
+        justify-content: center;
+        min-height: 150px;
+        width: 100%;
+        margin-top: 65px;
+    }
+    .image, .image img {
+        width: 150px;
+        height: 150px;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+    .col {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about-info, .contact-info {
+        width: 100%;
+    }
+    .project-container {
+        justify-content: center;
+    }
+    .project-box {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .featured-name {
+        font-size: 40px;
+    }
+    .project-box {
+        width: 100%;
+    }
+    .form-inputs {
+        flex-direction: column;
+    }
+    .input-field {
+        width: 100%;
+    }
+}
+
+/* I styled the experience timeline to present work experience in a clear and structured format. */
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 2em;
+}
+.experience-item {
+  background: #f7f9fb;
+  border-left: 4px solid var(--first-color);
+  padding: 1.2em 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(110,87,224,0.07);
+  transition: box-shadow 0.3s;
+}
+.experience-item:hover {
+  box-shadow: 0 6px 18px rgba(110,87,224,0.13);
+}
+.exp-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+  margin-bottom: 0.7em;
+}
+.exp-role {
+  font-weight: 600;
+  color: var(--first-color);
+  font-size: 1.1em;
+}
+.exp-company {
+  color: var(--text-color-third);
+  font-size: 1em;
+}
+.exp-date {
+  margin-left: auto;
+  color: #888;
+  font-size: 0.98em;
+}
+.exp-details {
+  margin-left: 1em;
+  color: var(--text-color-second);
+  font-size: 1em;
+  list-style: disc;
+}
+
+/* I created a grid layout for the skills section to display skills in a visually appealing manner. */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2em;
+  margin-top: 2em;
+}
+.skill-card {
+  background: linear-gradient(120deg, var(--first-color) 0%, var(--second-color) 100%);
+  color: #fff;
+  padding: 1em 1.2em;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1.05em;
+  text-align: center;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0,201,255,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.skill-card:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(0,201,255,0.13);
+}
+
+/* I styled the centered about box to highlight important information with a clean design. */
+.about-centered-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: 18px;
+  box-shadow: 1px 8px 20px 2px var(--first-shadow-color);
+  padding: 3em 3em;
+  text-align: center;
+}
+.about-centered-box p {
+  color: #444;
+  font-size: 1.08em;
+  line-height: 1.8;
+  margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
